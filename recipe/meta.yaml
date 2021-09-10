@@ -11,14 +11,11 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  build:
-    # If your project compiles code (such as a C extension) then add the required compilers as separate entries here.
-    # Compilers are named 'c', 'cxx' and 'fortran'.
-    - {{ compiler('c') }}
+  build: []
   host:
     - python
     - pip
