@@ -1,5 +1,5 @@
 {% set name = "fsspec-reference-maker" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b40f88718f93508135a8b9e839c0d7880317080a6a26f1128d610e0bc8952f3b
+  sha256: 0421904d50aa6271dd546995432d34107fc1aa127d91f17a339d084c6ede5c43
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build: []
@@ -42,7 +42,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Functions to make reference descriptions for ReferenceFileSystem'
+  summary: Functions to make reference descriptions for ReferenceFileSystem
   dev_url: https://github.com/intake/fsspec-reference-maker
 
 extra:
